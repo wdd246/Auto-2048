@@ -54,12 +54,12 @@ function lot() {
 
         if(scores[i]>maxi){
             maxi=scores[i];
-            tops.innerHTML = "Top: "+maxi;
+            tops.innerHTML = "<h2>Top:<h2> "+maxi;
         }
         if (gameover) {
             scores[i] = score;
             console.log(scores);
-            scoresp.innerHTML += " " + scores[i];
+            scoresp.innerHTML += "<h2>Last scores</h2>" + scores[i] +", ";
             console.log("GAME OVER");
             i++;
             setup();
@@ -112,4 +112,4 @@ function drawGrid() {
         }
     }
 }
-setInterval(lot, 10);
+setInterval(lot, 100);
